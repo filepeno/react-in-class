@@ -1,24 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <nav>
+        <ul>
+          <a href="/">Home</a>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
+      <section className="ProductList">
+        <h1>Products</h1>
+        <article>
+          <h2 className="ProductName">Product</h2>
+          <p className="Description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, quas tenetur. Assumenda laboriosam, minima dignissimos quae sequi alias quidem voluptatem nemo. Aliquam quibusdam provident est aperiam debitis cum repudiandae obcaecati!
+          </p>
+        </article>
+        <article>
+          <h2 className="ProductName">Product</h2>
+          <p className="Description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, quas tenetur. Assumenda laboriosam, minima dignissimos quae sequi alias quidem voluptatem nemo. Aliquam quibusdam provident est aperiam debitis cum repudiandae obcaecati!
+          </p>
+        </article>
+        <article>
+          <h2 className="ProductName">Product</h2>
+          <p className="Description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, quas tenetur. Assumenda laboriosam, minima dignissimos quae sequi alias quidem voluptatem nemo. Aliquam quibusdam provident est aperiam debitis cum repudiandae obcaecati!
+          </p>
+        </article>
+        <article>
+          <h2 className="ProductName">Product</h2>
+          <p className="Description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, quas tenetur. Assumenda laboriosam, minima dignissimos quae sequi alias quidem voluptatem nemo. Aliquam quibusdam provident est aperiam debitis cum repudiandae obcaecati!
+          </p>
+        </article>
+        <article>
+          <h2 className="ProductName">Product</h2>
+          <p className="Description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, quas tenetur. Assumenda laboriosam, minima dignissimos quae sequi alias quidem voluptatem nemo. Aliquam quibusdam provident est aperiam debitis cum repudiandae obcaecati!
+          </p>
+        </article>
+      </section>
+      <aside>
+        <section className="MyBasket">
+          <ul>
+            <li>Total items</li>
+            <li>Price</li>
+          </ul>
+        </section>
+        <form className="CheckoutForm"></form>
+      </aside>
+    </main>
   );
 }
 
