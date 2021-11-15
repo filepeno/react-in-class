@@ -1,4 +1,5 @@
 import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   const product = {
@@ -14,21 +15,6 @@ function App() {
       <ProdustList product={product} />
       <Basket {...[basket]} />
     </main>
-  );
-}
-
-function Header() {
-  return (
-    <header>
-      <nav>
-        <ul>
-          <NavLink />
-          <NavLink />
-          <NavLink />
-          <NavLink />
-        </ul>
-      </nav>
-    </header>
   );
 }
 
@@ -58,14 +44,6 @@ function Product(props) {
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, quas tenetur. Assumenda laboriosam, minima dignissimos quae sequi alias quidem voluptatem nemo. Aliquam quibusdam provident est aperiam debitis cum repudiandae obcaecati!
       </p>
     </article>
-  );
-}
-
-function NavLink() {
-  return (
-    <li>
-      <a href="/">Home</a>
-    </li>
   );
 }
 
