@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
+import ProdustList from "./components/Productlist";
 
 function App() {
   const product = {
@@ -15,35 +16,6 @@ function App() {
       <ProdustList product={product} />
       <Basket {...[basket]} />
     </main>
-  );
-}
-
-function ProdustList(props) {
-  return (
-    <section className="ProductList">
-      <h1>Products</h1>
-      <Product {...props} />
-      <Product {...props} />
-      <Product {...props} />
-      <Product {...props} />
-      <Product {...props} />
-      <Product {...props} />
-    </section>
-  );
-}
-
-function Product(props) {
-  console.log(props);
-  return (
-    <article className="Product">
-      <h2 className="ProductName">{props.product.productdisplayname}</h2>
-      <h3 className="Price">
-        <span>{props.product.price}</span> dkk
-      </h3>
-      <p className="Description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, quas tenetur. Assumenda laboriosam, minima dignissimos quae sequi alias quidem voluptatem nemo. Aliquam quibusdam provident est aperiam debitis cum repudiandae obcaecati!
-      </p>
-    </article>
   );
 }
 
