@@ -72,17 +72,23 @@ function Basket(props) {
   console.log(props);
   return (
     <aside className="Basket">
-      <section className="MyBasket">
-        <h1>Basket</h1>
-        <ul>
-          <li>
-            You have <span>{props[0].length}</span> items in the basket
-          </li>
-          <li>Price</li>
-        </ul>
-      </section>
+      <MyBasket {...props} />
       <form className="CheckoutForm"></form>
     </aside>
+  );
+}
+
+function MyBasket(props) {
+  return (
+    <section className="MyBasket">
+      <h1>Basket</h1>
+      <ul>
+        <li>
+          You have <span>{props[0].length}</span> items in the basket
+        </li>
+        <li>Price</li>
+      </ul>
+    </section>
   );
 }
 
