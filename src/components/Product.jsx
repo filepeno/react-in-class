@@ -1,7 +1,10 @@
 export default function Product(props) {
   console.log(props);
+  const styles = {
+    background: props.product.soldOut ? "green" : "red",
+  };
   return (
-    <article className="Product">
+    <article style={styles} className="Product">
       <h2 className="ProductName">{props.product.productdisplayname}</h2>
       <h3 className="Price">
         <span>{props.product.price}</span> dkk
