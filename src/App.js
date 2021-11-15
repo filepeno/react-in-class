@@ -7,11 +7,11 @@ function App() {
     price: 895,
     soldOut: 0,
   };
-  const basket = [];
+  const basket = [1, 2, 3];
   return (
     <main>
       <Header />
-      <ProdustList {...product} />
+      <ProdustList product={product} />
       <Basket {...[basket]} />
     </main>
   );
@@ -47,11 +47,12 @@ function ProdustList(props) {
 }
 
 function Product(props) {
+  console.log(props);
   return (
     <article className="Product">
-      <h2 className="ProductName">{props.productdisplayname}</h2>
+      <h2 className="ProductName">{props.product.productdisplayname}</h2>
       <h3 className="Price">
-        <span>{props.price}</span> dkk
+        <span>{props.product.price}</span> dkk
       </h3>
       <p className="Description">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, quas tenetur. Assumenda laboriosam, minima dignissimos quae sequi alias quidem voluptatem nemo. Aliquam quibusdam provident est aperiam debitis cum repudiandae obcaecati!
