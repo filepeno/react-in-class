@@ -2,8 +2,8 @@
 import { useState } from "react";
 
 export default function Product(props) {
-  const initialAmount = 0;
-  const [amount, changeAmount] = useState(initialAmount);
+  // const initialAmount = 0;
+  const [amount, changeAmount] = useState(0);
 
   function addToCart() {
     console.log("product added");
@@ -11,8 +11,10 @@ export default function Product(props) {
   }
 
   function removeFromCart() {
-    console.log("product removed");
-    changeAmount((prevAmount) => prevAmount - 1);
+    if (amount > 0) {
+      console.log("product removed");
+      changeAmount((prevAmount) => prevAmount - 1);
+    }
   }
 
   return (
