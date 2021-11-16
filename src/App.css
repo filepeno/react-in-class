@@ -31,6 +31,12 @@ header {
   color: rgb(218, 58, 58);
 }
 
+.AddRemove {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 .hidden {
   visibility: hidden;
 }
