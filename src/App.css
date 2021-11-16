@@ -24,12 +24,12 @@ header {
 
 .Product {
   min-height: 13rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 6fr 1fr 1fr 1fr;
+  gap: 1rem;
+  justify-items: center;
   text-align: center;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(240, 240, 240);
 }
 
 .Product.soldout {
