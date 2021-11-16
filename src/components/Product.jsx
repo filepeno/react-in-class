@@ -1,5 +1,9 @@
+// import addToCart from "./Basket";
+
 export default function Product(props) {
-  console.log(props);
+  function addToCart() {
+    console.log(props.id);
+  }
 
   return (
     <article className={`Product ${props.soldOut ? "" : "soldOut"}`}>
@@ -11,6 +15,7 @@ export default function Product(props) {
       <p className="Description">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, quas tenetur. Assumenda laboriosam, minima dignissimos quae sequi alias quidem voluptatem nemo. Aliquam quibusdam provident est aperiam debitis cum repudiandae obcaecati!
       </p>
+      <button onClick={addToCart}>Add to cart</button>
     </article>
   );
 }
