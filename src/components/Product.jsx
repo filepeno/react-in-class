@@ -18,12 +18,12 @@ export default function Product(props) {
   }
 
   return (
-    <article className={`Product ${props.soldout ? "" : "soldOut"}`}>
+    <article className={`Product ${props.soldout ? "soldout" : ""}`}>
       <h2 className="ProductName">{props.productdisplayname}</h2>
       <h3 className="Price">
         <span>{props.price}</span> dkk
       </h3>
-      <h4 className={`SoldOutTag ${props.soldout ? "hidden" : ""}`}>sold out</h4>
+      <h4 className={`SoldOutTag ${props.soldout ? "" : "hidden"}`}>sold out</h4>
 
       <div className="AddRemove">
         {" "}
