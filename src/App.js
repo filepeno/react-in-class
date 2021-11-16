@@ -13,7 +13,7 @@ function App() {
   return (
     <main>
       <Header />
-      <ProdustList product={product} />
+      <ProdustList {...product} />
       <Basket {...[basket]} />
     </main>
   );
