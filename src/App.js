@@ -6,14 +6,15 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [articles, setArticles] = useState(5);
   useEffect(() => {
-    fetch("https://kea-alt-del.dk/t7/api/products?limit=5")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-        console.log(data);
-      });
-  }, []);
+    async function fetchData() {
+      const res = await fetch("https://kea-alt-del.dk/t7/api/products?limit=" + articles);
+      const data = await res.json();
+      setProducts(data);
+    }
+    fetchData();
+  }, [articles]);
 
   const addProduct = () => {
     setProducts((prevState) =>
@@ -35,6 +36,8 @@ function App() {
     <main>
       <Header />
       <button onClick={addProduct}>Add product</button>
+      <button onClick={() => setArticles(10)}>Load 10 products</button>
+      <button onClick={() => setArticles(20)}>Load 20 products</button>
       <ProdustList products={products} addToBasketFunction={addToBasket} />
       <Basket basket={basket} />
     </main>
