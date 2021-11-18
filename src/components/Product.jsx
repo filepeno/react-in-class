@@ -8,6 +8,10 @@ export default function Product(props) {
   function addToCart() {
     console.log("product added");
     changeAmount((prevAmount) => prevAmount + 1);
+    props.addToBasketFunction({
+      productdisplayname: props.productdisplayname,
+      price: props.price,
+    });
   }
 
   function removeFromCart() {

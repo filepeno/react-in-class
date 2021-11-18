@@ -2,7 +2,7 @@ import Product from "./Product";
 
 export default function ProdustList(props) {
   console.log(props);
-  const productlist = props.products.map((product) => <Product {...product} key={product.id} />);
+  const productlist = props.products.map((product) => <Product {...product} key={product.id} {...props} />);
   return (
     <section className="ProductList">
       <h1>Products</h1>

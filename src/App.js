@@ -160,15 +160,15 @@ function App() {
   console.log(productsData);
   const [basket, setBasket] = useState([]);
 
-  function addToBasket() {
+  function addToBasket(props) {
     console.log("add to basket");
-    const newBasket = setBasket((oldBasket) => oldBasket.concat({ productdisplayname: "Lort", price: 30 }));
+    setBasket((oldBasket) => oldBasket.concat({ props }));
   }
   return (
     <main>
       <Header />
-      <button onClick={addToBasket}>Add to basket</button>
-      <ProdustList products={productsData} />
+
+      <ProdustList products={productsData} addToBasketFunction={addToBasket} />
       <Basket {...[basket]} />
     </main>
   );
