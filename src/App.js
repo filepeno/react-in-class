@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import ProdustList from "./components/Productlist";
+import { useState } from "react";
 
 function App() {
   const productsData = [
@@ -157,10 +158,16 @@ function App() {
   ];
 
   console.log(productsData);
-  const basket = [1, 2, 3];
+  const [basket, setBasket] = useState([]);
+
+  function addToBasket() {
+    console.log("add to basket");
+    const newBasket = setBasket((oldBasket) => oldBasket.concat({ productdisplayname: "Lort", price: 30 }));
+  }
   return (
     <main>
       <Header />
+      <button onClick={addToBasket}>Add to basket</button>
       <ProdustList products={productsData} />
       <Basket {...[basket]} />
     </main>
