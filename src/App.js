@@ -192,7 +192,9 @@ function MyBasket(props) {
         <li>
           You have <span>{props[0].length}</span> items in the basket
         </li>
-        <li>Price</li>
+        <li>
+          <span></span>DKK
+        </li>
       </ul>
     </section>
   );
