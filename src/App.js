@@ -177,31 +177,37 @@ function App() {
       <Header />
       <button onClick={addProduct}>Add product</button>
       <ProdustList products={productsData} addToBasketFunction={addToBasket} />
-      <Basket {...[basket]} />
+      <Basket basket={basket} />
     </main>
   );
 }
 
 function Basket(props) {
-  console.log(props);
   return (
     <aside className="Basket">
-      <MyBasket {...props} />
+      <MyBasket basket={props.basket} />
       <form className="CheckoutForm"></form>
     </aside>
   );
 }
 
 function MyBasket(props) {
+  const initialValue = 0;
+  let sum = props.basket.reduce(function (previousValue, currentValue) {
+    return previousValue + currentValue.product.price;
+  }, initialValue);
+
+  console.log(sum);
+  console.log(props.basket);
   return (
     <section className="MyBasket">
       <h1>Basket</h1>
       <ul>
         <li>
-          You have <span>{props[0].length}</span> items in the basket
+          You have <span>{props.basket.length}</span> items in the basket
         </li>
         <li>
-          <span></span>DKK
+          <span>Total: {sum} </span>DKK
         </li>
       </ul>
     </section>
