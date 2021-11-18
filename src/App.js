@@ -4,7 +4,7 @@ import ProdustList from "./components/Productlist";
 import { useState } from "react";
 
 function App() {
-  const productsData = [
+  const [productsData, setProducts] = useState([
     {
       id: 1163,
       gender: "Men",
@@ -155,8 +155,16 @@ function App() {
       brandname: "Puma",
       soldout: 0,
     },
-  ];
-
+  ]);
+  const addProduct = () => {
+    setProducts((prevState) =>
+      prevState.concat({
+        productdisplayname: "Peter",
+        price: 666,
+        soldout: 1,
+      })
+    );
+  };
   console.log(productsData);
   const [basket, setBasket] = useState([]);
 
@@ -167,7 +175,7 @@ function App() {
   return (
     <main>
       <Header />
-
+      <button onClick={addProduct}>Add product</button>
       <ProdustList products={productsData} addToBasketFunction={addToBasket} />
       <Basket {...[basket]} />
     </main>
