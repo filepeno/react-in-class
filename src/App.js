@@ -160,9 +160,9 @@ function App() {
   console.log(productsData);
   const [basket, setBasket] = useState([]);
 
-  function addToBasket(props) {
+  function addToBasket(product) {
     console.log("add to basket");
-    setBasket((oldBasket) => oldBasket.concat({ props }));
+    setBasket((oldBasket) => oldBasket.concat({ product }));
   }
   return (
     <main>
