@@ -7,7 +7,7 @@ export default function MyBasket(props) {
   console.log(sum);
   console.log(props.basket);
   return (
-    <section className={`MyBasket ${props.basket.length === 0 ? "hidden" : ""}`}>
+    <section className={`MyBasket`}>
       <h1>Basket</h1>
       <ul>
         <li>
