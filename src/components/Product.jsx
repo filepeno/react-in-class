@@ -31,9 +31,13 @@ export default function Product(props) {
 
       <div className="AddRemove">
         {" "}
-        <button onClick={addToCart}>+</button>
+        <button disabled={props.soldout ? true : false} onClick={addToCart}>
+          +
+        </button>
         <div>{amount}</div>
-        <button onClick={removeFromCart}>-</button>
+        <button disabled={props.soldout ? true : false} onClick={removeFromCart}>
+          -
+        </button>
       </div>
     </article>
   );
