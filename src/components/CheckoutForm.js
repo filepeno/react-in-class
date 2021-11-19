@@ -8,8 +8,8 @@ export default function CheckoutForm(props) {
           <input type="text" name="name" />
         </label>
         <label>
-          Email
-          <input type="email" name="email" />
+          Credit card
+          <input type="text" name="cc" />
         </label>
         <button>Buy</button>
       </form>
